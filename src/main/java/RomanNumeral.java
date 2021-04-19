@@ -81,8 +81,7 @@ public class RomanNumeral {
             if (i == 3)
                 for (int j = 0; j < value - 1; ++j)
                     alpha.insert(0, digit);
-
-            if (!digit.toString().isEmpty())
+            else if (!digit.toString().isEmpty())
                 alpha.insert(0, digit);
         }
 
