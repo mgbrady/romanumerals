@@ -31,6 +31,7 @@ public class RomanNumeral {
     }
 
     public static void main(String[] args) {
+        Math.pow(2, 3);
         new RomanNumeral();  //ugly utility form
         getUserInput();
     }
@@ -82,8 +83,7 @@ public class RomanNumeral {
         var alpha = new StringBuilder();
 
         for (int i = 0; i < snum.length(); ++i) {
-            int value = Integer.parseInt(String.valueOf(snum.charAt(i)));
-            var digit = new StringBuilder(pattern[value]);
+            var digit = new StringBuilder(pattern[Integer.parseInt(String.valueOf(snum.charAt(i)))]);
 
             for (int j = 0; j < digit.length(); ++j)
                 digit.replace(j, j + 1, place[i][enumeratePattern(digit.charAt(j))]);
